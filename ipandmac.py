@@ -19,7 +19,7 @@ def show_sys_info( hostname, key ):
    output = bs(r.content,'html.parser')
    print("The hostname is " + (output.response.result.system.hostname).text)
    print("The management ip address and mask is " + (output.find('ip-address')).text + " " + (output.response.result.system.netmask).text)
-   print("The default gateway is " + (output.find('default-gateway')).text)
+   print("The management interface default gateway is " + (output.find('default-gateway')).text)
    print("PAN OS version is " + (output.find('sw-version')).text)
    return
 
