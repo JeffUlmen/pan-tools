@@ -5,9 +5,13 @@ import sys, getopt
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+##Convert this to be "import dns.resolver, dns.reversename"
+##pip install dnspython
 from dns import resolver,reversename
 
 #use beautifulsoup to parse xml tags easily and effortlessly. Much easier than lxml module
+##pip install BeautifulSoup4
+##Change to "import bs4" (see get-api-key.py at Eagle Telephone)
 from bs4 import BeautifulSoup as bs
 
 import ulmenutils
